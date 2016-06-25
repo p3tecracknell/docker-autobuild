@@ -12,7 +12,6 @@ app.use(bodyParser.json({verify: utility.saveRawBody}));
 
 const port = process.env.PORT || 5000;
 
-// ============ Build ===========
 function determineProviderType(headers) {
 	if (headers.hasOwnProperty('x-gogs-event')) return 'gogs';
 	if (headers.hasOwnProperty('x-github-event')) return 'github';
